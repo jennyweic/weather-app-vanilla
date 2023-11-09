@@ -2,16 +2,18 @@ body{
     font-family: 'Bebas Neue', sans-serif;
 font-family: 'DM Sans', sans-serif;
 margin: 0 auto;
+display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .app-card {
     background-color: blanchedalmond;
     text-align: center;
-    padding: 20px;
-    width: 100%;
-    margin: auto;
-    
-
+    padding: 30px;
+   margin: 30px auto;
+    max-width: 600px;
+    border-radius: 20px;
 }
 
 .heading-details{
@@ -28,12 +30,16 @@ box-sizing: border-box;
 box-sizing: border-box;
     background-color: lightcoral;
     padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (max-wdith:600px){
-    .app-card {
-            display: flex;
-                justify-content: center;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
+#form-input{
+    width: 150px;
+    border: 2px solid blueviolet;
+    padding: 5px;
+    margin-top:-10px;
+    outline: none;
 }
+
