@@ -1,60 +1,69 @@
-body{
-    font-family: 'Bebas Neue', sans-serif;
-font-family: 'DM Sans', sans-serif;
-margin: 0 auto;
-display: flex;
-    justify-content: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+body {
+  font-family: "Bebas Neue", sans-serif;
+  font-family: "DM Sans", sans-serif;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .app-card {
-    background-color: blanchedalmond;
-    text-align: center;
-    padding: 30px;
-   margin: 30px auto;
-border-radius: 50px;
-    
+  background-color: blanchedalmond;
+  text-align: center;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 50px;
 }
 
-.heading-details{
-box-sizing: border-box;
-    background-color: lightgreen;
+.heading-details {
+  box-sizing: border-box;
+  background-color: lightgreen;
 }
 
-.container{
-box-sizing: border-box;
-    background-color: lightskyblue;
+.container {
+  box-sizing: border-box;
+  background-color: lightskyblue;
 }
 
-#search-function{
-box-sizing: border-box;
-    background-color: lightcoral;
-    padding: 5px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#search-function {
+  box-sizing: border-box;
+  background-color: lightcoral;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #search-button {
-    border-radius: 10px;
-    width:25% auto;
-    border: 0.5rem solid blueviolet;
+  border-radius: 10px;
+  width: 25%;
+  border: 0.5rem solid navy;
+  background-color: lightblue;
+  color: navy;
 }
 
-#form-input{
-    width: 70%;
-    border: 0.5rem solid blueviolet;
-    padding: 5px;
-    margin:10px;
+#search-button:hover {
+  display: inline-block;
+  position: relative;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media (max-width: 600px){
-    .app-card{
-min-width: 500px;
+#form-input {
+  width: 70%;
+  border: 0.5rem solid navy;
+  padding: 5px;
+  margin: 10px;
+}
 
-    }
+@media (max-width: 600px) {
+  .app-card {
+    min-width: 500px;
+  }
 
-    #form-input #search-button{
-        width: 100%;
-    }
+  #form-input #search-button {
+    width: 100%;
+  }
 }
