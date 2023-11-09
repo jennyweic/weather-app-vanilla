@@ -37,9 +37,10 @@ body {
 #search-button {
   border-radius: 10px;
   width: 25%;
-  border: 0.5rem solid navy;
-  background-color: lightblue;
-  color: navy;
+  height: 3.5vh;
+  border: 0.1rem solid lightblue;
+  background-color: lightseagreen;
+  color: white;
 }
 
 #search-button:hover {
@@ -52,8 +53,9 @@ body {
 }
 
 #form-input {
+  border-radius: 10px;
   width: 70%;
-  border: 0.5rem solid navy;
+  border: 0.3rem solid lightseagreen;
   padding: 5px;
   margin: 10px;
 }
