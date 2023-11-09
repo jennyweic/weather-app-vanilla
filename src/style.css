@@ -7,6 +7,10 @@ margin: 0 auto;
 .app-card {
     background-color: blanchedalmond;
     text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    
 
 }
 
@@ -29,8 +33,7 @@ box-sizing: border-box;
 @media (max-wdith:600px){
     .app-card {
             display: flex;
-            justify-content: center;
-            padding: 20px auto;
+                justify-content: center;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
