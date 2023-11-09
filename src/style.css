@@ -6,9 +6,8 @@ margin: 0 auto;
 
 .app-card {
     background-color: blanchedalmond;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 600px;
     text-align: center;
+
 }
 
 .heading-details{
@@ -25,4 +24,13 @@ box-sizing: border-box;
 box-sizing: border-box;
     background-color: lightcoral;
     padding: 5px 10px;
+}
+
+@media (max-wdith:600px){
+    .app-card {
+            display: flex;
+            justify-content: center;
+            padding: 20px auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 }
