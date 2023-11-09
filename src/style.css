@@ -36,6 +36,18 @@ h4 {
   background-color: lightgreen;
 }
 
+.main-weather-details-grid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  row-gap: 3px;
+  column-gap: 10px;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
 .container {
   box-sizing: border-box;
   background-color: lightskyblue;
@@ -74,6 +86,21 @@ h4 {
   border: 0.3rem solid lightseagreen;
   padding: 5px;
   margin: 10px;
+}
+
+#temperature {
+  font-size: 50px;
+}
+
+#celcius {
+  vertical-align: super;
+  font-size: 30px;
+}
+
+#description {
+}
+
+#feels-Like {
 }
 
 @media (max-width: 600px) {
