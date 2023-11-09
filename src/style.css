@@ -12,8 +12,7 @@ display: flex;
     text-align: center;
     padding: 30px;
    margin: 30px auto;
-    max-width: 600px;
-    border-radius: 20px;
+    
 }
 
 .heading-details{
@@ -33,6 +32,11 @@ box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
+}
+
+#search-button {
+    border-radius: 15px;
 }
 
 #form-input{
@@ -43,3 +47,13 @@ box-sizing: border-box;
     outline: none;
 }
 
+@media (max-width: 600px){
+    .app-card{
+min-width: 500px;
+border-radius: 50px;
+    }
+
+    #form-input #search-button{
+        width: 100%;
+    }
+}
