@@ -12,6 +12,7 @@ display: flex;
     text-align: center;
     padding: 30px;
    margin: 30px auto;
+border-radius: 50px;
     
 }
 
@@ -32,25 +33,25 @@ box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
 }
 
 #search-button {
-    border-radius: 15px;
+    border-radius: 10px;
+    width:25% auto;
+    border: 0.5rem solid blueviolet;
 }
 
 #form-input{
-    width: 150px;
-    border: 2px solid blueviolet;
+    width: 70%;
+    border: 0.5rem solid blueviolet;
     padding: 5px;
-    margin-top:-10px;
-    outline: none;
+    margin:10px;
 }
 
 @media (max-width: 600px){
     .app-card{
 min-width: 500px;
-border-radius: 50px;
+
     }
 
     #form-input #search-button{
