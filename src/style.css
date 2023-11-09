@@ -4,3 +4,18 @@
     width: 600px;
     text-align: center;
 }
+
+.heading-details{
+box-sizing: border-box;
+    background-color: lightgreen;
+}
+
+.container{
+box-sizing: border-box;
+    background-color: lightskyblue;
+}
+
+#search-function{
+box-sizing: border-box;
+    background-color: lightcoral
+}
