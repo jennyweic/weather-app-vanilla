@@ -14,18 +14,17 @@ h1 {
   margin: 0.2em;
 }
 
-h1:hover{
-    transform: scale(2.1);
-    color: lightseagreen;
-    text-shadow: 1px 1px #558abb;
+h1:hover {
+  transform: scale(2.1);
+  color: lightseagreen;
+  text-shadow: 1px 1px #558abb;
 }
 
 h3 {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-weight: 900; 
-   line-height: 1.5em;
- 
+  font-weight: 900;
+  line-height: 1.5em;
 }
 
 h4 {
@@ -34,12 +33,23 @@ h4 {
   font-weight: lighter;
 }
 
+footer {
+  font-size: x-small;
+  padding-top: 35px;
+  padding-bottom: 0;
+}
+
+footer:hover {
+  transform: scale(1.5);
+  color: lightseagreen;
+}
+
 .app-card {
   background-color: whitesmoke;
-  border-radius: 150px;
+  border-radius: 250px;
   text-align: center;
-  margin: 30px auto;
-  padding: 3rem;
+  margin: 5px auto;
+  padding: 3.5rem;
 }
 
 .heading-details {
@@ -49,10 +59,10 @@ h4 {
 }
 
 .main-small-container {
-    border: 1px solid lightblue;
-    border-radius: 30px;
-    padding: 0.1rem;
-    margin: 10px;
+  border: 1px solid lightblue;
+  border-radius: 30px;
+  padding: 0.1rem;
+  margin: 10px;
 }
 
 .main-weather-details-grid {
@@ -82,8 +92,8 @@ h4 {
 
 .forecast-container {
   box-sizing: border-box;
-  background-color: lightskyblue;
-border-radius: 30px;
+  background-color: rgba(135, 206, 250, 0.425);
+  border-radius: 30px;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
@@ -98,13 +108,15 @@ border-radius: 30px;
   height: fit-content;
   padding: 0.5rem;
   margin: 1px auto;
-
+}
+.forecast-title:hover,
+#day-of-the-week:hover {
+  font-style: italic;
 }
 
 #search-function {
   box-sizing: border-box;
   border-radius: 20px;
-  background-color: whitesmoke
   padding: 5px 10px;
   display: flex;
   justify-content: center;
@@ -114,7 +126,7 @@ border-radius: 30px;
 #search-button {
   border-radius: 10px;
   width: 18%;
-  height: 6.5vh;
+  height: 3.5vh;
   border: 0.1rem solid lightskyblue;
   background-color: lightseagreen;
   color: white;
