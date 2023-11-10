@@ -14,16 +14,24 @@ h1 {
   margin: 0.2em;
 }
 
+h1:hover{
+    transform: scale(2.1);
+    color: lightseagreen;
+    text-shadow: 1px 1px #558abb;
+}
+
 h3 {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-style: normal;
+  font-weight: 900; 
+   line-height: 1.5em;
+ 
 }
 
 h4 {
   margin-top: 5px;
   margin-bottom: 0px;
-  font-style: normal;
+  font-weight: lighter;
 }
 
 .app-card {
@@ -36,7 +44,8 @@ h4 {
 
 .heading-details {
   box-sizing: border-box;
-  background-color: lightgreen;
+  border-radius: 55px;
+  padding: 0.1rem;
 }
 
 .main-weather-details-grid {
@@ -88,7 +97,8 @@ h4 {
 
 #search-function {
   box-sizing: border-box;
-  background-color: lightcoral;
+  border-radius: 20px;
+  background-color: whitesmoke
   padding: 5px 10px;
   display: flex;
   justify-content: center;
@@ -97,9 +107,9 @@ h4 {
 
 #search-button {
   border-radius: 10px;
-  width: 25%;
-  height: 3.5vh;
-  border: 0.1rem solid lightblue;
+  width: 18%;
+  height: 6.5vh;
+  border: 0.1rem solid lightskyblue;
   background-color: lightseagreen;
   color: white;
 }
@@ -115,8 +125,8 @@ h4 {
 
 #form-input {
   border-radius: 10px;
-  width: 70%;
-  border: 0.3rem solid lightseagreen;
+  width: 50%;
+  border: 0.3rem solid lightskyblue;
   padding: 5px;
   margin: 10px;
 }
