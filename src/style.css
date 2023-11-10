@@ -48,6 +48,13 @@ h4 {
   padding: 0.1rem;
 }
 
+.main-small-container {
+    border: 1px solid lightblue;
+    border-radius: 30px;
+    padding: 0.1rem;
+    margin: 10px;
+}
+
 .main-weather-details-grid {
   display: grid;
   grid-template-rows: auto;
@@ -57,7 +64,6 @@ h4 {
   justify-items: center;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid black;
   padding-left: 35px;
 }
 
@@ -70,22 +76,20 @@ h4 {
   justify-items: center;
   align-items: center;
   justify-content: space-between;
-  border: 1px black dashed;
   padding: 1rem;
   font-size: 15px;
 }
 
-.container {
+.forecast-container {
   box-sizing: border-box;
   background-color: lightskyblue;
+border-radius: 30px;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
 }
 
 .forecast-grid {
-  box-sizing: border-box;
-  background-color: lightskyblue;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(6, 1fr);
@@ -93,6 +97,8 @@ h4 {
   column-gap: 10px;
   height: fit-content;
   padding: 0.5rem;
+
+
 }
 
 #search-function {
