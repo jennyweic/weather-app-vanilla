@@ -62,17 +62,25 @@ h4 {
   padding-left: 50px;
 }
 
-.row {
-  border: 1px solid black;
-}
-
-.col {
-  border: 1px solid black;
-}
-
 .container {
   box-sizing: border-box;
   background-color: lightskyblue;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  row-gap: 3px;
+  column-gap: 10px;
+}
+
+.forecast-grid {
+  box-sizing: border-box;
+  background-color: lightskyblue;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 3px;
+  column-gap: 10px;
+  height: fit-content;
 }
 
 #search-function {
@@ -123,7 +131,13 @@ h4 {
   font-size: 35px;
 }
 
-#feels-like-degree {
+#day-of-the-week,
+#forecast-temperature {
+  font-size: 15px;
+}
+
+#forecast-degree {
+  font-size: 13px;
 }
 
 @media (max-width: 600px) {
