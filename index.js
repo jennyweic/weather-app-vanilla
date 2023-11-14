@@ -51,8 +51,51 @@ console.log(currentHumidity);
 let currentHumidityElement = document.querySelector("#humidity");
 currentHumidityElement.innerHTML = currentHumidity;
 
+let date = new Date(response.data.time*1000)
+}
+
+
+//5 make sure the date is updated aswell according to city information
+
+
+let timeElement = document.querySelector("#time");
+timeElement.innerHTML = `${hours()}:${minutes()}`;
+
+let dayElement = document.querySelector("#day");
+dayElement.innerHTML =`${days(date.getDay())}`
+
+let monthElement = document.querySelector("month");
+monthElement.innerHTML =`${months(date.getMonth())}`;
+
+let dateElement = document.querySelector("date");
+dateElement.innerHTML =`${date.getDate()}`;
+
+let yearElement = document.querySelector("year");
+yearElement.innerHTML =`${date.getFullYear()}`;
+
+
+//6 function to format date
+function formatDate(date){
+
+//get hour
+let hours =date.gethours();
+//get minutes
+let minutes = date.getMinutes();
+
+//get date
+let date = date.getDate() ;
+//get day of the week
+let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
+let day = days(date.getDay());
+//get month
+let months =["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+let month = months(date.getMonth());
+//get year
+let year = date.getFullYear();
 
 }
+
+
 
 
 
