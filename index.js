@@ -47,6 +47,7 @@ function displayCityWeather(response) {
   let currentHumidityElement = document.querySelector("#humidity");
   currentHumidityElement.innerHTML = currentHumidity;
 
+  //Date and Time
   let newTimeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   newTimeElement.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
@@ -79,4 +80,7 @@ function displayCityWeather(response) {
 
     return `${day}, ${month} ${today} ${year}`;
   }
+  //weather icon image
+  let iconElement = document.querySelector("weather-icon");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" id="icon"`;
 }
