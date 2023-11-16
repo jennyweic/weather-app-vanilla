@@ -110,7 +110,7 @@ footer:hover {
   margin: 1px auto;
 }
 .forecast-title:hover,
-#day-of-the-week:hover {
+#forecast-day:hover {
   font-style: italic;
 }
 
@@ -162,12 +162,14 @@ footer:hover {
   font-size: 18px;
 }
 
-#day-of-the-week,
-#forecast-temperature {
-  font-size: 15px;
+.forecast-day,
+.forecast-temperature-max {
+  font-size: 13px;
+  font-weight: bold;
 }
 
-#forecast-degree {
+.forecast-temperature-min {
+  opacity: 0.7;
   font-size: 13px;
 }
 

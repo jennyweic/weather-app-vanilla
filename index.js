@@ -85,3 +85,28 @@ function displayCityWeather(response) {
   let iconElement = document.querySelector("#weather-icon");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" id="icon" />`;
 }
+
+//6 create a new function for forecast
+function displayForecast(city) {
+
+    let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
+    let forecastHtml ="";
+    
+    days.forEach(function (day)) {
+        forecastHtml = 
+        forecastHtml + 
+`
+    <div class="forecast-grid>
+    <div class="forecast-day">${day}</div>
+    <div class="icons"><img src="" id="forecast-icons"/></div>
+    <div class="forecast-temperature">
+    <span class="forecast-temperature-max">10°C</span>
+    <span class="forecast-temperature-min">12°C</span>
+     </div>          
+    </div>
+`;
+};
+    let forecastElement = document.querySelector("#forecast");
+    forecastElement.innerHTML = forecastHtml;
+}
+displayForecast();
