@@ -47,46 +47,24 @@ let currentHumidity = response.data.temperature.humidity;
 console.log(currentHumidity);
 let currentHumidityElement = document.querySelector("#humidity");
 currentHumidityElement.innerHTML = currentHumidity;
-}
 
+let newTimeElement = document.querySelector("#time");
+let date = new Date(response.data.time * 1000);
+newTimeElement.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+let newDayElement = document.querySelector("#days-of-the-week");
+newDayElement.innerHTML = formatDate(date);
 
-//6 function to format date
-    let now = new Date();
-    console.log(now);
-
-function formatDate(date){
-    let date = now.getDate() ;
+function formatDate(date) {
     let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
-    let day = days[now.getDay()];
+    let day = days[date.getDay()];
+
     let months =["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     let month = months[date.getMonth()];
+
+    let today = date.getDate();
+
     let year = date.getFullYear();
 
-    let dayElement = document.querySelector("#day");
-    dayElement.innerHTML =`${days(date.getDay())}`
-
-    let monthElement = document.querySelector("month");
-    monthElement.innerHTML =`${months(date.getMonth())}`;
-
-    let dateElement = document.querySelector("date");
-    dateElement.innerHTML =`${date.getDate()}`;
-
-    let yearElement = document.querySelector("year");
-    yearElement.innerHTML =`${date.getFullYear()}`;
-
-//TIME UPDATE
-    let timeElement = document.querySelector("#time");
-    let date = new Date(response.data.time*1000);
-    timeElement.innerHTML = `${date.gethours()}:${date.getMinutes()}`;
-
-    let hours =date.gethours();
-    let minutes = date.getMinutes();
-
-    let newTimeElement = `${hours()}:${minutes()}`; 
-    let newDayElement =`${day}, ${month} ${date} ${year}`;
+return `${day}, ${month} ${today} ${year}`;
 }
-
-
-//5 make sure the date is updated aswell according to city information
-// make sure the date is updated aswell according to city information
-// display the weather icon
+}
