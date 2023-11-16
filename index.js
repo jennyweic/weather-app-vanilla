@@ -100,12 +100,15 @@ function getForecast(city) {
 function displayForecast(response) {
   console.log(response.data);
   //   let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
-  let forecastHtml = "";
+  //change day to timestamp and convert
 
-  response.data.daily.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  let forecastHtml = "";
+  // add index to display 6 days
+  response.data.daily.forEach(function (day, index) {
+    if (index < 6) {
+      forecastHtml =
+        forecastHtml +
+        `
     <div class="forecast-grid>
     <div class="forecast-day">${day}</div>
     <div><img src="${day.condition.icon_url}" id="forecast-icons"/></div>
@@ -119,6 +122,7 @@ function displayForecast(response) {
      </div>          
     </div>
 `;
+    }
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
