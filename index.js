@@ -84,18 +84,27 @@ function displayCityWeather(response) {
   //weather icon image
   let iconElement = document.querySelector("#weather-icon");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" id="icon" />`;
+
+  //7b call the getForecast data inside the search results
+  console.log(getForecast(response.data.city));
+}
+
+//7a create new forecast function for API
+function getForecast(city) {
+  let apiKey = "698445003bc2a9cbfcb050ae4t74oc8b";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios(apiUrl).then(displayForecast);
 }
 
 //6 create a new function for forecast
-function displayForecast(city) {
+function displayForecast(response) {
+  let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
+  let forecastHtml = "";
 
-    let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
-    let forecastHtml ="";
-    
-    days.forEach(function (day)) {
-        forecastHtml = 
-        forecastHtml + 
-`
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
     <div class="forecast-grid>
     <div class="forecast-day">${day}</div>
     <div class="icons"><img src="" id="forecast-icons"/></div>
@@ -105,8 +114,9 @@ function displayForecast(city) {
      </div>          
     </div>
 `;
-};
-    let forecastElement = document.querySelector("#forecast");
-    forecastElement.innerHTML = forecastHtml;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
 }
+
 displayForecast();
