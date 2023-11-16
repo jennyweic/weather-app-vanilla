@@ -96,11 +96,16 @@ function getForecast(city) {
   axios(apiUrl).then(displayForecast);
 }
 
+//8 change day to timestamp and convert
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+
 //6 create a new function for forecast
 function displayForecast(response) {
   console.log(response.data);
-  //   let days = ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
-  //change day to timestamp and convert
 
   let forecastHtml = "";
   // add index to display 6 days
@@ -110,7 +115,7 @@ function displayForecast(response) {
         forecastHtml +
         `
     <div class="forecast-grid>
-    <div class="forecast-day">${day}</div>
+    <div class="forecast-day">${formatDay(day.time)}</div>
     <div><img src="${day.condition.icon_url}" id="forecast-icons"/></div>
     <div class="forecast-temperature">
     <span class="forecast-temperature-max">${Math.round(
