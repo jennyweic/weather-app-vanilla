@@ -67,8 +67,8 @@ footer:hover {
 
 .main-weather-details-grid {
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: auto;
+  grid-template-rows: 2fr;
+  grid-template-columns: repeat(3, 1fr);
   row-gap: 3px;
   column-gap: 10px;
   justify-items: center;
@@ -159,7 +159,7 @@ footer:hover {
 }
 
 #decription {
-  font-size: 35px;
+  font-size: 18px;
 }
 
 #day-of-the-week,

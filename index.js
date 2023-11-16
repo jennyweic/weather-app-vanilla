@@ -80,7 +80,8 @@ function displayCityWeather(response) {
 
     return `${day}, ${month} ${today} ${year}`;
   }
+
   //weather icon image
-  let iconElement = document.querySelector("weather-icon");
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" id="icon"`;
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" id="icon" />`;
 }
